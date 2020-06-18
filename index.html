@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="CFcalc.js"></script>
+
+    <title>コラボフェス被ダメ計算機</title>
+  </head>
+  <body>
+    <h1>コラボフェス被ダメ計算機</h1>
+
+    
+
+    <br>
+    <div class="container">
+    	<div class="form-row">
+  			<div class="form-group col-6">
+    			<label for="stagelevel">ステージLv</label>
+    			<select class="form-control" id="stagelevel" placeholder="ステージLv">
+    				<option>1</option>
+    				<option>2</option>
+    				<option>3</option>
+    				<option>4</option>
+    				<option>5</option>
+    				<option>6</option>
+    				<option>7</option>
+    				<option>8</option>
+    				<option>9</option>
+    				<option>10</option>
+    				<option>11</option>
+    				<option>12</option>
+    				<option>13</option>
+    				<option>14</option>
+    				<option>15</option>
+    				<option>16</option>
+    				<option>17</option>
+    				<option>18</option>
+    				<option>19</option>
+    				<option>20</option>
+    				<option>21</option>
+    				<option>22</option>
+    				<option>23</option>
+    				<option>24</option>
+    				<option>25</option>
+    				<option>26</option>
+    				<option>27</option>
+    				<option>28</option>
+    				<option>29</option>
+    				<option>30</option>
+    			</select>	
+  			</div>
+  			<div class="form-group col-6">
+    			<label for="turncount">現在のターン数</label>
+    			<select class="form-control" id="turncount" placeholder="ターン数">
+    				<option>1</option>
+    				<option>2</option>
+    				<option>3</option>
+    				<option>4</option>
+    				<option>5</option>
+    				<option>6</option>
+    				<option>7</option>
+    				<option>8</option>
+    				<option>9</option>
+    				<option>10</option>
+    				<option>11</option>
+    				<option>12</option>
+    				<option>13</option>
+    				<option>14</option>
+    				<option>15</option>
+    				<option>16</option>
+    				<option>17</option>
+    				<option>18</option>
+    				<option>19</option>
+    				<option>20</option>
+    			</select>
+  			</div>
+  			<div class="form-group col-6">
+    			<label for="watage">影響力ダウン(%)</label>
+    			<select class="form-control" id="watage" placeholder="0~100(%)">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>20</option>
+    				<option>30</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>60</option>
+    				<option>70</option>
+    				<option>80</option>
+    				<option>90</option>
+    				<option>100</option>
+    			</select>
+  			</div>
+  			<div class="form-group col-6">
+    			<label for="strcount">"打たれ強い"の個数</label>
+    			<select class="form-control" id="strcount" placeholder="1~5">
+    				<option>0</option>
+    				<option>1</option>
+    				<option>2</option>
+    				<option>3</option>
+    				<option>4</option>
+    				<option>5</option>
+    			</select>
+  			</div>
+		</div>
+		<div class="form-group">
+            <label for="ifcenter">ステージ：</label>
+            <div class="form-check form-check-inline" style="margin-right:4px;">
+              <input class="form-check-input" type="radio" name="ifcenter" id="ifcenter1" value="1" checked>
+              <label class="form-check-label" for="ifcenter1">VoDaVi</label>
+            </div>
+            <div class="form-check form-check-inline" style="margin-right:4px;">
+              <input class="form-check-input" type="radio" name="ifcenter" id="ifcenter2" value="0.7">
+              <label class="form-check-label" for="ifcenter2">Ce</label>
+            </div>
+        </div>
+	</div>
+	<div class="container">
+		<h6>メンタルダメージカット(%)</h6>
+		<div class="form-row">
+			<div class="form-group col-4">
+    			<label for="damagecut1"></label>
+    			<select class="form-control" id="damagecut1">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+
+			<div class="form-group col-4">
+    			<label for="damagecut2"></label>
+    			<select class="form-control" id="damagecut2">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+		
+			<div class="form-group col-4">
+    			<label for="damagecut3"></label>
+    			<select class="form-control" id="damagecut3">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+		
+			<div class="form-group col-4">
+    			<label for="damagecut4"></label>
+    			<select class="form-control" id="damagecut4">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+	
+			<div class="form-group col-4">
+    			<label for="damagecut5"></label>
+    			<select class="form-control" id="damagecut5">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+
+			<div class="form-group col-4">
+    			<label for="damagecut6"></label>
+    			<select class="form-control" id="damagecut6">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+
+			<div class="form-group col-4">
+    			<label for="damagecut7"></label>
+    			<select class="form-control" id="damagecut7">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+
+			<div class="form-group col-4">
+    			<label for="damagecut8"></label>
+    			<select class="form-control" id="damagecut8">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+	
+			<div class="form-group col-4">
+    			<label for="damagecut9"></label>
+    			<select class="form-control" id="damagecut9">
+    				<option>0</option>
+    				<option>10</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>25</option>
+    				<option>30</option>
+    				<option>33</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>70</option>
+    				<option>75</option>
+    			</select>
+  			</div>
+		</div>
+		<h6>メンタルダメージアップ(%)</h6>
+		<div class="form-row">
+			<div class="form-group col-4">
+    			<label for="damageup"></label>
+    			<select class="form-control" id="damageup">
+    				<option>0</option>
+    				<option>15</option>
+    				<option>20</option>
+    				<option>30</option>
+    				<option>40</option>
+    				<option>50</option>
+    				<option>60</option>
+    				<option>100</option>
+    			</select>
+  			</div>
+  		</div>
+  		<br>
+		<button type="button" class="btn btn-primary" id="calc">計算する</button>
+	</div>
+
+	<div class="container">
+        <br>
+        <h4>被ダメージ：<span id="damage"></span></h4>
+        <br><br>
+        <center><a href="https://twitter.com/lookup_ue">@lookup_ue</a></center>
+	</div>
+
+  </body>
+</html>
