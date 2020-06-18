@@ -24,9 +24,6 @@
     		!$.isNumeric($("#damagecut4").val()) ||
     		!$.isNumeric($("#damagecut5").val()) ||
     		!$.isNumeric($("#damagecut6").val()) ||
-    		!$.isNumeric($("#damagecut7").val()) ||
-    		!$.isNumeric($("#damagecut8").val()) ||
-    		!$.isNumeric($("#damagecut9").val()) ||
     		!$.isNumeric($("#damageup").val()) ){
     		alert("入力エラー")
       		return false;
@@ -60,7 +57,7 @@
 		
 		//ダメージCUT&UP
 		let cuts = 1;
-		for (let i=0; i<9; i++)
+		for (let i=0; i<6; i++)
 			cuts *= (100 - damagecut[i]) / 100;
 		cuts *= (100 + damageup) / 100;
 
@@ -87,9 +84,6 @@
  			damagecut.push(Number($("#damagecut4").val()));
  			damagecut.push(Number($("#damagecut5").val()));
  			damagecut.push(Number($("#damagecut6").val()));
- 			damagecut.push(Number($("#damagecut7").val()));
- 			damagecut.push(Number($("#damagecut8").val()));
- 			damagecut.push(Number($("#damagecut9").val()));
  			damageup = Number($("#damageup").val());
 		}else{
 			
