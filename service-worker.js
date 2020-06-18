@@ -16,12 +16,12 @@ self.addEventListener('fetch', function(e) {
 
 workbox.precaching.precacheAndRoute([
   {
-    url: '/index.html',
-    revision: '12345'
+    url: 'index.html',
+    revision: '10000'
   },
   {
-    url: '/CFcalc.js',
-    revision: '12345'
+    url: 'CFcalc.js',
+    revision: '10000'
   },
   { 
 ])
