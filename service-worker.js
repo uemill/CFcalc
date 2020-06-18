@@ -20,6 +20,5 @@ workbox.precaching.precacheAndRoute([
   {
     url: 'CFcalc.js',
     revision: '10000'
-  },
-  { 
+  } 
 ])
