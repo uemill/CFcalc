@@ -1,0 +1,26 @@
+{
+  "name": "コラボフェス被ダメ計算機",
+  "short_name": "コラ計",
+  "icons": [{
+      "src": "icon/watage.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }, {
+      "src": "icon/watage.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }, {
+      "src": "icon/watage.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    }, {
+      "src": "icon/watage.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "icon/watage.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }],
+  "display": "standalone",
+}
