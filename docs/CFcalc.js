@@ -65,7 +65,7 @@
 		cuts *= Math.pow(0.95, strcount);
 
 		//小数点以下切り捨て
-		damage = Math.floor(damage*cuts);
+		damage = Math.floor(damage*cuts)-1;
 	}
 
 
